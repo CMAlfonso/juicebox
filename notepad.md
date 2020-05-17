@@ -9,3 +9,7 @@ VALUES
     ('harry', 'potter1'),
     ('ron', 'weasley7'),
     ('hermione', 'granger1');
+
+
+TAGS COMING OUT AS "[ARRAY]"
+AUTHOR COMING OUT AS "[OBJECT]"
