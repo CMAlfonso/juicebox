@@ -17,7 +17,7 @@ const {
   
 async function dropTables() {
     try {
-        console.log("Starting to drop tables...");
+        // console.log("Starting to drop tables...");
 
         await client.query(`
         DROP TABLE IF EXISTS post_tags;
@@ -37,7 +37,7 @@ async function dropTables() {
   
 async function createTables() {
     try {
-        console.log("Starting to build tables...");
+        // console.log("Starting to build tables...");
 
         await client.query(`
         CREATE TABLE users (
@@ -98,47 +98,47 @@ async function rebuildDB() {
 
 async function testDB() {
     try {
-      console.log("Starting to test database...");
+      // console.log("Starting to test database...");
   
-      console.log("Calling getAllUsers");
-      const users = await getAllUsers();
-      console.log("Result:", users);
+      // console.log("Calling getAllUsers");
+      // const users = await getAllUsers();
+      // console.log("Result:", users);
   
-      console.log("Calling updateUser on users[0]");
-      const updateUserResult = await updateUser(users[0].id, {
-        name: "GinnyW",
-        location: "Quidditch Pitch"
-      });
-      console.log("Result:", updateUserResult);
+      // console.log("Calling updateUser on users[0]");
+      // const updateUserResult = await updateUser(users[0].id, {
+      //   name: "GinnyW",
+      //   location: "Quidditch Pitch"
+      // });
+      // console.log("Result:", updateUserResult);
   
-      console.log("Calling getAllPosts");
-      const posts = await getAllPosts();
-      console.log("Result:", posts);
+      // console.log("Calling getAllPosts");
+      // const posts = await getAllPosts();
+      // console.log("Result:", posts);
   
-      console.log("Calling updatePost on posts[0]");
-      const updatePostResult = await updatePost(posts[0].id, {
-        title: "Quidditch Practice",
-        content: "Wednesday, 5:00 p.m."
-      });
-      console.log("Result:", updatePostResult);
+      // console.log("Calling updatePost on posts[0]");
+      // const updatePostResult = await updatePost(posts[0].id, {
+      //   title: "Quidditch Practice",
+      //   content: "Wednesday, 5:00 p.m."
+      // });
+      // console.log("Result:", updatePostResult);
   
-      console.log("Calling getUserById with 1");
-      const harry = await getUserById(1);
-      console.log("Result:", harry);
+      // console.log("Calling getUserById with 1");
+      // const harry = await getUserById(1);
+      // console.log("Result:", harry);
 
-      console.log("Calling getPostsByUser with 1");
-      const harryP = await getPostsByUser(1);
-      console.log("Result:", harryP);
+      // console.log("Calling getPostsByUser with 1");
+      // const harryP = await getPostsByUser(1);
+      // console.log("Result:", harryP);
 
-    console.log("Calling updatePost on posts[1], only updating tags");
-    const updatePostTagsResult = await updatePost(posts[1].id, {
-      tags: ["#youcandoanything", "#redfish", "#bluefish"]
-    });
-    console.log("Result:", updatePostTagsResult);
+      // console.log("Calling updatePost on posts[1], only updating tags");
+      // const updatePostTagsResult = await updatePost(posts[1].id, {
+      //   tags: ["#youcandoanything", "#redfish", "#bluefish"]
+      // });
+      // console.log("Result:", updatePostTagsResult);
 
-    console.log("Calling getPostsByTagName with #happy");
-    const postsWithHappy = await getPostsByTagName("#happy");
-    console.log("Result:", postsWithHappy);
+      // console.log("Calling getPostsByTagName with #happy");
+      // const postsWithHappy = await getPostsByTagName("#happy");
+      // console.log("Result:", postsWithHappy);
   
       console.log("Finished database tests!");
     } catch (error) {
@@ -149,7 +149,7 @@ async function testDB() {
 
 async function createInitialUsers() {
     try {
-        console.log("Starting to create users...");
+        // console.log("Starting to create users...");
 
         const harry = await createUser({ username: 'harry', password: 'potter1', name: 'HarryP' });
         const ron = await createUser({ username: 'ron', password: 'weasley7', name: 'RonW' });
